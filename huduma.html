@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Huduma | KEVOO STUDIO</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* MABADILIKO: Picha sasa ni kubwa zaidi na siyo duara tena */
+        
+        .card-img-container {
+            width: 100%;
+            /* Inachukua upana wote wa kadi */
+            height: 200px;
+            /* Urefu ulioongezwa ili picha iwe kubwa */
+            margin: 0 auto 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            /* Kona laini badala ya duara kamili */
+            border: 1px solid rgba(212, 175, 55, 0.5);
+            /* Mstari mwembamba wa dhahabu */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Inahakikisha picha inajaza nafasi vizuri */
+            transition: transform 0.5s;
+            /* Madoido ya picha ikiguzwa */
+        }
+        
+        .card:hover .card-img-container img {
+            transform: scale(1.1);
+            /* Picha inajikuza kidogo mteja akigusa kadi */
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="naija song.mp4.mp4" type="video/mp4">
+    </video>
+    <div class="overlay-global"></div>
+
+    <nav>
+        <div class="logo">KEVOO<span>STUDIO</span></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="huduma.html">Huduma</a></li>
+            <li><a href="vifaa.html">Vifaa</a></li>
+            <li><a href="locteshin.html">Location</a></li>
+            <li><a href="mawasiliano.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <h1 class="section-title">Huduma na Bei</h1>
+        <div class="grid">
+
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="1.jpg.jpg" alt="Photoshoot Sample">
+                </div>
+                <h3>Photoshoot</h3>
+                <p>Masaa 2 ya shooting na picha 20 edited.</p>
+                <div class="price">Tsh 50,000</div>
+                <a href="mawasiliano.html" class="btn">Book Now</a>
+            </div>
+
+            <div class="card" style="border: 2px solid #d4af37;">
+                <div class="card-img-container">
+                    <img src="download (31).jpg" alt="Live Streaming Sample">
+                </div>
+                <h3>Live Streaming</h3>
+                <p>YouTube/Facebook Live kwa masaa 4.</p>
+                <div class="price">Tsh 250,000</div>
+                <a href="mawasiliano.html" class="btn">Book Now</a>
+            </div>
+
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="4.jpg.jpg" alt="Wedding Sample">
+                </div>
+                <h3>Premium Wedding</h3>
+                <p>Full Day, Drone Shots & Cinema Movie.</p>
+                <div class="price">Tsh 800,000+</div>
+                <a href="mawasiliano.html" class="btn">Book Now</a>
+            </div>
+
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="download (32).jpg" Music Video Sample ">
+                </div>
+                <h3>Music Video</h3>
+                <p>Professional video shooting & high-end editing.</p>
+                <div class="price ">Tsh 500,000+</div>
+                <a href="mawasiliano.html " class="btn ">Book Now</a>
+            </div>
+
+            <div class="card ">
+                <div class="card-img-container ">
+                    <img src="College Balloon column.jpg " alt="Event Sample ">
+                </div>
+                <h3>Event Coverage</h3>
+                <p>Mikutano, Sherehe za Kuzaliwa na Send-off.</p>
+                <div class="price ">Tsh 150,000+</div>
+                <a href="mawasiliano.html " class="btn ">Book Now</a>
+            </div>
+
+            <div class="card ">
+                <div class="card-img-container ">
+                    <img src="Drone Shot - DJI Mavic 3 Classic.jpg " alt="Drone Sample ">
+                </div>
+                <h3>Drone Services</h3>
+                <p>Aerial shots za 4K kwa ajili ya miradi na matukio.</p>
+                <div class="price ">Tsh 100,000+</div>
+                <a href="mawasiliano.html " class="btn ">Book Now</a>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

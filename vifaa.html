@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vifaa | KEVOO STUDIO</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* MPANGILIO WA PICHA ZA VIFAA (Zinafanana na Huduma kwa Class zaidi) */
+        
+        .card-img-container {
+            width: 100%;
+            height: 220px;
+            /* Urefu mkubwa kidogo kwa ajili ya vifaa */
+            margin: 0 auto 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+        }
+        
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .card:hover .card-img-container img {
+            transform: scale(1.1);
+            /* Picha inajikuza kidogo ukigusa kadi */
+        }
+        
+        .card h3 {
+            color: #d4af37;
+            /* Rangi ya dhahabu kwa majina ya vifaa */
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="naija song.mp4.mp4" type="video/mp4">
+    </video>
+    <div class="overlay-global"></div>
+
+    <nav>
+        <div class="logo">KEVOO<span>STUDIO</span></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="huduma.html">Huduma</a></li>
+            <li><a href="vifaa.html">Vifaa</a></li>
+            <li><a href="locteshin.html">Location</a></li>
+            <li><a href="mawasiliano.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <h1 class="section-title">Vifaa Tunavyotumia</h1>
+        <div class="grid">
+
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="6.jpg.jpg" alt="DJI RC2 Drone">
+                </div>
+                <h3>DJI RC2 Drone</h3>
+                <p>Aerial shots za 4K kwa Live Stream.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="5.jpg.jpg" alt="8K Cinema Camera">
+                </div>
+                <h3>8K Cinema Camera</h3>
+                <p>Ubora wa picha za juu kabisa.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="drone1.jpg (3).jpg" alt="Studio Lighting">
+                </div>
+                <h3>Studio Lighting</h3>
+                <p>Taa za kisasa kwa photoshoot.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="gimbo 1.jpg.png" alt="Gimbal Stabilizer">
+                </div>
+                <h3>Gimbal Stabilizer</h3>
+                <p>Picha tulivu zisizo na mitikisiko (Smooth shots).</p>
+            </div>
+
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="sauti 1.jpg.png" alt="Audio Gear">
+                </div>
+                <h3>Wireless Microphones</h3>
+                <p>Sauti safi kwa mahojiano na matukio mubashara.</p>
+            </div>
+
+            <div class="card">
+                <div class="card-img-container">
+                    <img src="TV .jpg.png" alt="Video Switcher">
+                </div>
+                <h3>Live Stream Switcher</h3>
+                <p>Usimamizi wa kamera nyingi kwa wakati mmoja.</p>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

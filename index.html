@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KEVOO STUDIO | Nyumbani</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* MABADILIKO YA POFOMASI ILI ISISUMBUE */
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .bg-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -2;
+            object-fit: cover;
+            background: #000;
+            /* Inazuia kadi kulemewa na video wakati wa kusogeza (scroll) */
+            transform: translateZ(0);
+        }
+        
+        .wapili-section {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .wapili-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            /* Kwa ajili ya iPhone (Safari) */
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 15px;
+            padding: 15px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            /* Inaboresha kasi ya render na kuzuia kutetema */
+            will-change: transform;
+            backface-visibility: hidden;
+        }
+        
+        .wapili-card:hover {
+            border-color: #d4af37;
+            transform: translateY(-10px);
+        }
+        
+        .wapili-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            background: #222;
+        }
+        
+        .wapili-card h3 {
+            font-size: 18px;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+        
+        .wapili-card p {
+            font-size: 13px;
+            color: #d4af37;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        /* Inazuia kuserereka (lagging) na kuboresha miguso kwenye simu */
+        
+        * {
+            -webkit-tap-highlight-color: transparent;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay loop muted playsinline preload="metadata" class="bg-video">
+        <source src="drone.mp4.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay-global"></div>
+
+    <nav>
+        <div class="logo">KEVOO<span>STUDIO</span></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="huduma.html">Huduma</a></li>
+            <li><a href="vifaa.html">Vifaa</a></li>
+            <li><a href="locteshin.html">Location</a></li>
+            <li><a href="mawasiliano.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="container" style="display:flex; flex-direction:column; justify-content:center; align-items:center; min-height: 100vh; padding: 20px;">
+        <h1 style="font-size: clamp(40px, 10vw, 70px); text-align: center; margin: 0;">KEVOO STUDIO</h1>
+        <p style="letter-spacing: 5px; color: #d4af37; text-align: center;">PROFESSIONAL CINEMATOGRAPHY</p>
+        <br>
+        <a href="huduma.html" class="btn">Gundua Huduma</a>
+
+        <div class="wapili-section">
+            <div class="wapili-card">
+                <img src="APS_0580.jpg" alt="KEVOO" class="wapili-img" loading="lazy">
+                <h3>KEVOO</h3>
+                <p>Director</p>
+            </div>
+
+            <div class="wapili-card">
+                <img src="kibao.png" alt="PARTNER" class="wapili-img" loading="lazy">
+                <h3>PARTNER</h3>
+                <p>Cinematographer</p>
+            </div>
+        </div>
+    </header>
+
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+</html>
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact | KEVOO STUDIO</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* MABADILIKO: Kifurushi cha Huduma (Dropdown) kiwe cheupe */
+        
+        select#huduma {
+            background-color: white !important;
+            color: black !important;
+            font-weight: bold;
+        }
+        /* Kuhakikisha option ndani yake pia ni nyeupe */
+        
+        select#huduma option {
+            background-color: white;
+            color: black;
+        }
+        /* Label ziwe na muonekano wazi */
+        
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: 600;
+            color: #d4af37;
+            /* Rangi ya dhahabu kwa label */
+        }
+    </style>
+
+    <script>
+        function tumaWhatsApp(event) {
+            event.preventDefault();
+
+            const jina = document.getElementById('jina').value;
+            const huduma = document.getElementById('huduma').value;
+            const ujumbe = document.getElementById('ujumbe').value;
+            const namba = "255617604118";
+
+            const maandishi = `Habari KEVOO STUDIO,\n\n*Jina:* ${jina}\n*Huduma:* ${huduma}\n*Ujumbe:* ${ujumbe}`;
+            const link = `https://wa.me/${namba}?text=${encodeURIComponent(maandishi)}`;
+
+            window.open(link, '_blank');
+        }
+    </script>
+</head>
+
+<body>
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="naija song.mp4.mp4" type="video/mp4">
+    </video>
+    <div class="overlay-global"></div>
+
+    <nav>
+        <div class="logo">KEVOO<span>STUDIO</span></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="huduma.html">Huduma</a></li>
+            <li><a href="vifaa.html">Vifaa</a></li>
+            <li><a href="locteshin.html">Location</a></li>
+            <li><a href="mawasiliano.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <h1 class="section-title">Wasiliana Nasi</h1>
+        <div class="card" style="max-width: 500px; margin: 0 auto; text-align: left;">
+            <form onsubmit="tumaWhatsApp(event)">
+                <label>Jina Lako</label>
+                <input type="text" id="jina" required placeholder="Andika jina lako...">
+
+                <label>Huduma</label>
+                <select id="huduma">
+                    <option>Photoshoot</option>
+                    <option>Live Streaming</option>
+                    <option>Premium Wedding</option>
+                    <option>Music Video</option>
+                    <option>Event Coverage</option>
+                    <option>Drone Services</option>
+                </select>
+
+                <label>Ujumbe</label>
+                <textarea id="ujumbe" rows="4" required placeholder="Eleza unachohitaji..."></textarea>
+
+                <br><br>
+                <button type="submit" class="btn" style="width:100%; border:none; cursor:pointer; background-color: #25D366; color: white; font-weight: bold;">
+                    Tuma kupitia WhatsApp
+                </button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>

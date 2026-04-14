@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Location | KEVOO STUDIO</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* MPANGILIO WA RAMANI NA SEARCH BAR */
+        
+        .search-box {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .search-box input {
+            padding: 10px;
+            width: 70%;
+            border-radius: 5px;
+            border: 1px solid #d4af37;
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+        }
+        
+        .map-container {
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #d4af37;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        
+        .location-info h2 {
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <script>
+        // Function ya kusaidia kutafuta eneo kwenye Google Maps
+        function tafutaEneo() {
+            const eneo = document.getElementById('searchQuery').value;
+            if (eneo) {
+                const mapUrl = `https://www.google.com/maps/search/${encodeURIComponent(eneo)}+to+Charity+of+Hope+Dar+es+Salaam`;
+                window.open(mapUrl, '_blank');
+            } else {
+                alert("Tafadhali andika eneo unalotafuta.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <video autoplay loop muted playsinline class="bg-video">
+        <source src="naija song.mp4.mp4" type="video/mp4">
+    </video>
+    <div class="overlay-global"></div>
+
+    <nav>
+        <div class="logo">KEVOO<span>STUDIO</span></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="huduma.html">Huduma</a></li>
+            <li><a href="vifaa.html">Vifaa</a></li>
+            <li><a href="locteshin.html">Location</a></li>
+            <li><a href="mawasiliano.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <h1 class="section-title">Location</h1>
+
+        <div class="card" style="max-width: 700px; margin: 0 auto; text-align: center; padding: 30px;">
+            <div class="location-info">
+                <h2>KEVOO STUDIO HQ</h2>
+                <p><strong>Mtaa:</strong> Charity of Hope, Dar es Salaam, Tanzania.</p>
+                <p><strong>Simu:</strong> +255 0617604118</p>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="searchQuery" placeholder="Andika eneo lako hapa (mf. Posta, Kariakoo)...">
+                <button onclick="tafutaEneo()" class="btn" style="padding: 10px 20px; font-size: 14px;">Tafuta</button>
+            </div>
+
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15846.30335032588!2d39.2100!3d-6.7800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b963c3789e3%3A0x123456789abcdef!2sDar%20es%20Salaam!5e0!3m2!1ssw!2stz!4v1710000000000!5m2!1ssw!2stz"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <br>
+            <a href="https://maps.google.com" target="_blank" class="btn" style="display: inline-block; text-decoration: none;">
+                Fungua Ramani Kamili
+            </a>
+        </div>
+    </section>
+</body>
+
+</html>
